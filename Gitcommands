@@ -1,0 +1,23 @@
+# To check the status of the repository
+git status
+# To see the commit history of the repository
+git log
+
+# To see the branches in the repository
+git branch 
+
+# Switch to the branch
+git checkout <branchname>
+
+# Create a new branch and switch to it
+git checkout -b <branchname>
+
+# Add and commit the changes in files or directory - local to remote sync of the data 
+git add <filename>   |    git add -A   
+git status
+git commit -m "added the new files"
+git status
+git push 
+
+# remote to local sync of the data
+git pull 
