@@ -1,0 +1,100 @@
+oracle-py  --   pandas-1.0
+
+mysql-py  -- pandas-2.0 
+
+
+python 3.12 - active
+
+python 3.14  - standby 
+
+
+virutalenv1 -- oracle-python -- code  corrupt in the folder/in package  
+
+virtualenv2 -- mysql-python 
+
+virtualenv3 -- python3.14
+
+virtualenv4 -- 
+
+Windows:
+pyhton -m venv AITraininguJunevirtual
+.\AITraininguJunevirtual\Scripts\activate
+pip install pandas |pip3 install pandas
+pip list|pip3 list
+deactivate
+
+MAC/Linux:
+pyhton -m venv AITraininguJunevirtual
+source AITraininguJunevirtual/bin/activate
+deactivate
+
+
+python 
+1. function - small reusable piece of code that performs a specific task ( one activity)
+2. module - is a combination of function, class and variables that are related to each other and perform a specific task.
+3. package - group of module but together to perform a specific task.
+
+module : 
+internal modules -- modules come with python installation 
+os, sys, math, datetime, json, re, random, time, subprocess, threading, multiprocessing, logging, argparse, collections, itertools, functools, etc
+
+external modules/package  : related with platform , application , cloud, database, web development, data science, machine learning, deep learning, etc
+
+platform : servicnow, databricks, snowflake, jira, microsoft AD, etc
+Cloud: aws, azure, gcp, ibm cloud, oracle cloud, etc
+databases: oracle, mysql, sql server, postgresql, mongodb, etc
+data science: numpy, pandas, matplotlib, seaborn, plotly, etc
+machine learning: scikit-learn, xgboost, lightgbm, catboost, etc
+
+pypi.org - python package index - repository of python packages
+
+java, javascript, go, ruby, rust 
+
+python:
+1. scripting/coding language
+2. interpreted language
+3. java - python - javascript -  rendering fast - VDOM 
+
+python is used mainly for backend coding  
+python frontend coding logics also - django /fastapi/flask 
+
+python - data analytics, Data engineering, data science, machine learning, deep learning, ai, web development, cloud computing, automation, scripting, operation etc
+
+python is a layman's language - easy to learn, read, write, understand, maintain, etc
+
+javascript - frontend coding language - react, angular, vuejs, next.js
+
+python as a scripting ,  development - automation , AI framework, ai Agent , observability, security 
+
+python coding structure 
+1. indentation - 2/4 spaces
+2. comments - single line comment - #, multi line comment - '''  '''
+3. variables - name, value, data type, etc
+4. data types - int, float, str, bool, list, tuple, set, dict, etc
+5. packages - group of modules
+6. functions, modules, condition, loops, classes, objects, etc
+7. main code 
+python coding structure - 1. import statements, 2. global variables, 3. functions, 4. main code
+
+
+
+# This condition is to validate the data
+"""
+rqereqwrew
+
+qrqer
+"""
+# ctrl + /  - to comment/uncomment the code | command + /
+
+if  a = 1:
+    print("a is 1")
+elif a == 2:
+    print("a is 2")
+else:
+    print("a is not 1 or 2")
+
+
+def func1():
+  print("This is function 1")
+
+
