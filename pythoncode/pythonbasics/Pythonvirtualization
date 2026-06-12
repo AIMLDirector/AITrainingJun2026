@@ -98,3 +98,43 @@ def func1():
   print("This is function 1")
 
 
+Variables - it is like container going to store data and holding the information about the data, size, type , location etc
+
+
+a = 10 # ( datatypes - int , size, location in memory, value, etc) - a - ascii value - 97, unicode value - 97, memory location - 0x7ffdfc8b8c10, etc
+b = 10.5
+print(type(a)) # <class 'int'>
+print(type(b)) # <class 'float'>
+
+Types of variables:
+1. local variable - variable defined inside a function/class/loop and can be accessed only inside that function/class/loop
+2. Global variable - variable defined outside the function and can be accessed anywhere in the code
+
+
+def func1():
+    c = 20 # local variable /temp variable 
+    print(c) # local variable
+    print(a) # global variable
+
+
+print(a) # global variable
+print(c) # local variable - error - NameError: name 'c' is not defined
+
+Data types: 
+1. Numerical data types: int, float, complex
+2. Text data types: str  = '' , "" , '''  '''
+3. sequencial data types: list, tuples, range 
+4. mapping data types: dict
+5. boolean data types: bool - True, False
+6. set data types: set  
+
+ int, float, str, list, range  
+
+ array data type - numpy array, pandas series, pandas dataframe, etc
+ list = []  # single dimension array 
+ tuples  ()
+ set = {}
+ dict  = {key: value }
+
+ range(1, 10,2) - it is a sequence of numbers starting from 0 by default and increments by 1 (by default) and stops before a specified number. It is used to generate a sequence of numbers.
+1 2 3 4 5 6 7 8 9 
