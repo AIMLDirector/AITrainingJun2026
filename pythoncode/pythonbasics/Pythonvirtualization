@@ -138,3 +138,30 @@ Data types:
 
  range(1, 10,2) - it is a sequence of numbers starting from 0 by default and increments by 1 (by default) and stops before a specified number. It is used to generate a sequence of numbers.
 1 2 3 4 5 6 7 8 9 
+
+
+t1 = (1, 2, 3, 4, 5,5) # tuple - immutable - cannot be changed after creation we cannot modifiy/delete/add
+
+
+s1 = {1, 2, 3, 4, 5} # set - unordered collection of unique elements - mutable - can be changed after creation we can modifiy/delete/add
+
+
+condition coding
+1. if else 
+2. while 
+3. do  while 
+4. try exception
+
+Loop coding
+1 for loop
+2.while loop 
+3.range function 
+
+operators::
+1. arithmetic operators: +, -, *, /, %, //, **
+2. logical operators: and, or, not
+3. comparison operators: ==, !=, >, <, >=, <=
+4. assignment operators: =, +=, -=, *=, /=, %=, //=, **=
+
+
+    

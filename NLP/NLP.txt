@@ -1,0 +1,80 @@
+
+
+NLP - > Neural network -> Transformer - > AI model 
+
+Data engineering (3- 4)
+Data orchestration( 3 - 4 )
+Machine learning team  
+AI team  
+
+
+AI model ( Data eng/ data orch/ ml)  
+
+AI team - model - business problem 
+
+
+data( 5 %) ->  model( 90 % ) - > UI 
+
+Left side:  2.5 crores  - 5 crores 
+NLP -- 2 
+Neural network -- Tensorflow/ pytorch 
+Training platform -- Deepspeed / Ray cluster
+Data Engineer - load the data / cleaning /consolidation/ Data tagging 
+GPU cluster --- NVIDIA 
+AI model 
+ python + C/C++  - 90 % - 10 % java/javascript 
+platform / Cloud/ hardware  -- oracle/Servicenow/ microsoft/google/aws   nvidia/interl/amd
+
+Transformer -- > open source --  > 
+
+Right side:  company 
+1 open source model
+2 license model
+
+Business problem : reducing the time - customer flow/ application/ recovery/ automation 
+
+how it is been done today ?
+
+if it is not solve what will happen ?
+
+1. solution - 1,2,3 -price different between them 
+
+1 process simplication  -- benefit 1 - 
+2 automation  -- benefit  2  
+3 AI Solution  - not cheaper  -- benefit -- 4 
+
+AI -  70 % - failure ( approach/ 35 % - AI does not need / wrong commitment - 2 months - 6  to 1 years )
+30 % - 15 % success  / 15 % enhancement in the solution 
+
+Time line  Q1 
+
+benefit time line  - Q3 
+
+Business Value: license cost/resource/time
+1. Reduce the cost 
+2. Reduce the time 
+3. Reduce the resource cost
+
+ROI 
+
+python( 80 % /javascript - 20 % ) 
+
+1 RAG
+2 Agent 
+3 Multi agent
+4 Deploy 
+4 monitor
+5 scale
+6 Trace and evalaute
+
+
+SME -- domain  + AI product 
+
+domain ( tech + business )
+
+AI TEAM: 
+
+1 developer(fresh) 2 . infrastructure( 5 - 20 years )  5 - 6   3. Data engineer9 5 - 20  -  4 . Analytics & Engineer - SME( 10- 25 )  
+
+
+

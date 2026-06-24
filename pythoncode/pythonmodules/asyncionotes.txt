@@ -1,0 +1,18 @@
+# task1( output ) -> task2 -> task3
+
+# memory : 
+# task1  --  await --  completed -- success  10 sec
+# task2 -- complete -- failure  30 sec
+# task3  -- completed 5 sec
+# task4
+# task5
+
+
+# task1
+# task2   - -- tasks3( wait for task1 and task2 to complete )  -- task4 -- task5
+
+# user1 -- model1
+# user2 -- model1
+# user3 -- model3 
+
+# session -- user1 --  
