@@ -1,0 +1,21 @@
+
+
+Neural network
+1 input layer
+2 output layer
+3 hidden layer
+
+Types
+1 ANN  Aritifical neural network ( FNN( Feedforwording neural network ), 
+RNN( Recursive neural network)) - Text 
+
+
+
+
+
+
+
+
+
+
+

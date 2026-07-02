@@ -1,0 +1,30 @@
+encoding - Rule based convesion into number --problem it does not any information about word, context / meaning 
+
+a - 1
+b =  2
+
+an - 1
+able = 2
+
+embedding  - AI based conversion, It map data into a number which main the meaning, context, relationship , place) 
+
+i am learning python 
+001 17222, 293923, 3752434, 42275221  002 
+i am python learning 
+i learning python am 
+
+word2vec -- google -- transformer( google ) -- models ( )
+i - 1722223324134134 ==  Vector format( context, meaning, location, place, alternative, combination ) =
+                                             [ 0.01  1.222  0.22
+                                             2.2   2.1    3.4
+                                              3.1  3.4     .3.6 ]
+
+
+encoder models
+text generation - decoder models -- openai model , gemini, 
+encode-decoder models - transformer 
+
+i am learning python 
+
+number -> vector 
+

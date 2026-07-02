@@ -1,0 +1,93 @@
+
+Embedding vectors and one-hot encoding are both techniques to represent categorical data numerically,
+ but embeddings are learned, dense, and compact, capturing semantic relationships in a lower-dimensional 
+ space, while one-hot encoding creates sparse, high-dimensional vectors where each category is an orthogonal 
+ dimension, making embeddings better for large datasets and semantic tasks, and one-hot encoding suitable for 
+ small, fixed categories without inherent order.  
+
+
+One-Hot Encoding
+* How it works: Creates a binary vector for each category, where only one element (the "hot" one) is 1,
+ and the rest are 0. 
+* Pros: Simple, deterministic, and effective for nominal (no natural order) categorical variables. 
+
+* Cons: Creates very high-dimensional and sparse vectors, which can lead to the "curse of dimensionality" and are inefficient for large datasets with many categories. Lacks semantic meaning and relationship between categories. 
+
+Embeddings
+* How it works: Maps data into dense, lower-dimensional vectors where each dimension captures latent features or semantic meaning. 
+* Pros: More computationally efficient, requires less memory, and can capture complex relationships and patterns, leading to better model performance and generalization. 
+* Cons: Requires significant training data and computational resources. The quality depends on the underlying training algorithm (e.g., Word2Vec, GloVe). 
+When to Use Which 
+
+* Use One-Hot Encoding When: You have a small, fixed number of categories and don't need to capture semantic relationships between them. 
+* Use Embeddings When: You have a large number of categories, or you need to leverage the semantic meaning and context of the data, as in natural language processing (NLP). 
+
+Key Differences
+* Dimensionality: Embeddings are lower-dimensional and dense; one-hot encoding creates high-dimensional and sparse vectors. 
+* Information Content: Embeddings encode semantic relationships; one-hot encoding provides no semantic information. 
+* Learning: Embeddings are learned through machine learning models; one-hot encoding is a fixed, deterministic process. 
+
+Word2Vec
+* Developed by Google (Mikolov et al., 2013).
+* It converts words into dense vectors (called embeddings), where similar words are close to each other in vector space.
+* Example: king - man + woman ≈ queen.
+ How it works:
+1. Two architectures:
+    * CBOW (Continuous Bag of Words): predicts a word from its surrounding words.
+    * Skip-Gram: predicts surrounding words given a word.
+2. The model trains on large text data and learns vector representations.
+3. After training, each word is represented as a fixed-size vector (e.g., 100-dimensional).
+ Limitation: It only learns whole word embeddings, so unseen words (OOV – out of vocabulary) are not represented.
+
+
+FastText
+* Developed by Facebook AI Research (2016).
+* It is an extension of Word2Vec.
+* Key difference: Instead of representing each word as a whole, FastText breaks words into subword units (character n-grams).
+Examples
+Word = “playing”
+* Subwords: “play”, “layi”, “ayin”, “ing”
+* Embedding is built from these pieces.
+Advantages of FastText:
+* Handles rare words better.
+* Can create embeddings for out-of-vocabulary (OOV) words (e.g., misspellings, new words).
+* Especially useful for morphologically rich languages (like Hindi, Tamil, Turkish, Finnish, etc.).
+
+
+
+
+Word2Vec = word-level embeddings.
+FastText = word + subword embeddings (smarter for rare/OOV words).
+
+
+Feature	CBOW	Skip-Gram
+Predicts	Word from context	Context from word
+Speed	Faster	Slower
+Accuracy	Good for frequent words	Better for rare words
+Best for	Small datasets	Large datasets
+
+
+    
+
+  What is a neural network?
+A neural network is a computational model inspired by the human brain's structure.
+ It consists of interconnected processing units, or neurons, arranged in layers that learn 
+ to recognize patterns in data. Neural networks are essential for deep learning, a subfield of machine learning that uses multi-layered networks to process and learn from complex data. 
+Core components
+A typical, basic neural network, known as a multi-layer perceptron (MLP), is composed of 
+three main parts: 
+Input Layer: The starting point that receives the raw data. Each neuron in this layer 
+corresponds to a feature in the input dataset.
+Hidden Layers: One or more layers between the input and output layers where the majority
+of the computation takes place. Each hidden neuron performs a weighted sum of its inputs, 
+adds a bias, and passes the result through an activation function.
+Output Layer: The final layer that produces the network's prediction. The number of neurons 
+in this layer corresponds to the number of outputs required for the task. 
+
+Neural Network:
+https://www.tredence.com/blog/neural-networks-guide-basic-to-advance#:~:text=Neural%20networks%20are%20mathematical%20models,and%20improve%20performance%20during%20training.
+https://www.ibm.com/think/topics/neural-networks#:~:text=A%20neural%20network%20can%20be,email%20is%20spam%20or%20not.
+https://www.ibm.com/think/topics/deep-learning
+
+
+
