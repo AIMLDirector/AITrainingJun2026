@@ -1,0 +1,78 @@
+Tools  == Connecting and fetch the external data
+
+1 internal Tools logic  ( Database, data engineering, ticketing product, application log, cloud )
+2 External tools logic ( Saas, cloud, websearch ,  vendor website scrap , pdf document, )
+
+connecting the tools:
+1. webservice
+2. API 
+3. token 
+4. MCP server 
+5. CLI - db, awscli, azure cli 
+
+External == SSL enabled 
+
+document : 
+1 100 documents( pdf/excel/csv/text) -- single document - unified format -- Data engineering 
+2. unifed format -- vector storage - vector format ( relationship with data )
+
+vector format( finance/ account/ HR/ customer ) -- size of the data is least import 
+model data( vector format) -- ( blog/ python/political/medical/finance/HR/comic books/ story book )
+
+context -- valid information relevant with the customer requirment/query 
+Accessing the Data
+speed
+
+
+what is current company financial status  and then past 10 years result 
+
+financial -- company -- current status 
+
+model --  finance -- compnay -- past ( 2000 - 2024)  --  8 years 
+
+Tools - vector db -- finance -- company -- current   -- 1 years 
+
+summarize the output 
+
+def oraclefn():
+
+Domain expert/SME -- monitoring/db/data engineering/cloud/application/network/storage/server 
+
+Workflow/pipeline(tasks)/jobs-- Step1( succes or failure ) -step2 - step3 - step4 ( rule based) + we dont have memory 
+jenkins pipeline / apache airflow databricks/
+Agent - step1( status + Output ) - step2( status- success/failure + step1 output + step2 output ) - step3 - step4 ( context based) + we have a memory
+
+Automation + workflow ( 80 % )
+single Agent ( tasks, memory , context, tools , structured output )
+1 step1 -- output
+2 step2 -- output( step1, step2) /input
+3 step3 -- output( step1, step2, step3 ) /input
+4 step4 -- output( step1, step2, step3, step4 ) /input
+5 result -- summary output - json/ text/ yaml /dictory 
+
+multi agent ( multi step approach)
+Please book a ticket for my travel to US 
+1. source and destination 
+2. mode of travel
+3. travel agency
+4. hotel booking
+5. bank account information
+6. flight , hotel booking  and travel details 
+
+Agent1 -- Agent2 -- Agent3/agent4 -- agent5 -- agent6 
+
+master agent ( break down the steps and pass to the respective sub agent )
+
+10+ agentic AI tools(langchain with langgraph/crewai , openai adk, google adk , oracle adk, azure adk, nvidia adk, databrick adk, claude adk  )
+1. model( size of the model , context ) -- claude fable,, gpt 5.6( cloud) , qwen3.6/ deepseek pro( cloud/ onpremises)
+2. tools ( your decision )
+agent( models, tools, structured output, memory, prompt ) 
+AI -- ANI - aritificial narrow intelligent 
+30+ 
+
+agent: 
+1 access issue ( user/pass, token, api key ) -- test case -- login or not 
+2 latency ( db, table ) - pause for 5 sec to 10 sec - retry - 3 - fail
+3 error( wrong information , wrong data, human error) - 
+4 logic ( step2 - step1)
+5 output structure -- ( step2 -- yaml )
