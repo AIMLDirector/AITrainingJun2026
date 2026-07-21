@@ -1,0 +1,118 @@
+1 low level Gateway --  MAc address ( l2 switch ) 
+2 mid level gateway ( routing ) - ip address ( L3 switch/ router) - TCP
+3 High level Gateway ( API / firewall/ Application Layer)
+
+
+Application Layer( End point level routing ) -- https/http
+
+gmail -- inbox/ draft/ compose / 
+
+
+
+firewall( allow or deny the request) --> proxy server(internal purpose)/ API Gateway( controller -- number of request(100) - queue) -- Application Gateway ( routing )
+
+optional :
+Firewall Layer 
+network level routing -- IP  -- ( multiple path to reach the destination )
+API Layers( APIGEE/Layer4/ Kong/Nginx/.....) -- controller( gmail.com - 100 request 1000 ( 100 - process)/ 900 - queue )?  -- server ( 10GB -- 100 / hacker ) 
+model level routing - LLM Gateway ( modelname/retry limit/ timeout ) - one model not responding / other model 
+application layers( authentication/ inbox/) -- ngnix /websphere/weblogic ( round robin/mini queue) ( inbox(failed)/ compose/ draft/send  ) timeout or error 
+
+1. SLA/ reduce you downtime
+
+
+framework -- model - Action(Search, RAG, Agentic AI ) -- 
+
+chatbot:
+Search -- ( internal data or external Data)
+Internal data -- model (trained)
+external data -- tools ( )/ API/ MCP/Webservice/webhook/token ( products)/ website  -- time consuming 
+
+RAG Search 
+External Data ( fixed content)  - ( pdf/doc/excel/webpage/sharepoint)
+
+Data - Vector - Vector DB
+ external-- > vector DB Search
+ internal -> ( model )
+
+
+Agentic AI 
+
+1. framework
+2. model
+3. Action ( search/RAG search/ Agentic AI - workflow )
+4. Gateway 
+5. tools 
+
+model:
+open source model : hugging face 
+license model : SAAS - gpt( 40+)/google(1000+)/facebook(600+)/anthropic( 20+)
+
+github -> huggingface( 24 Lakhs) -> ollama( 200) /lmstudi/litellm 
+
+ollama : standard open source model ( scanning / certify )
+
+Framework : structure of writing the code :
+
+open source Framework: ollama/lmstudio/litellm
+vendor based framework(SDK) : openai/ google sdk/ anthropic SDK  -- least important 
+neutral Framework : Langchain/llamaindex/haystack/azure/aws/google/ -- open source/ license 
+
+
+langchain( any model) -  90 to 95 % (startup/enterprise )
+llamaindex - 1 to 3 % 
+haystack - 1 % 
+cloud = 3 to 5 % 
+open source framework -- learning/development /product -- 1 to 3 % ( startup )
+
+model :  USA/ europe( feature/security/cost )
+openai model 
+google model/facebook model
+anthropic 
+
+ASIA/ Eastern country : ( cost/ security/feature)
+1 qwen model
+2 deepseek
+3 openai 
+4 google model
+5 facebook
+6 anthropic 
+
+framework : Enterprise company 
+1 langchain - open source 
+2. azure framework 
+
+startup :
+
+AI products
+platform :
+1 IAAS cloud (server/deployment) -- AZURE/Google/AWS 
+2 on premise ( setup/server/deployment ) -- langchain /mlflow 
+3 SAAS cloud (deployment ) - Azure AI foundry / langsmith/vercel/litellm/
+4 PAAS cloud ( container/ kubernetes/deployment ) -- kubernetes cluster/pivotal cloud foundry/openshift/
+
+PAAS/SAAS/IAAS 
+PAAS - 80 to 90 % ( cloud/on premise)
+SAAS - 10 to 20 % 
+IAAS - 5 to 10 %
+on premise server - 2 % 
+
+from langchain_ollama import ChatOllama
+ |
+ |      model = ChatOllama(
+ |          model="gpt-oss:20b",
+ |          validate_model_on_init=True,
+ |          temperature=0.8,
+ |          num_predict=256,
+ |          # other params ...
+ |      )
+ |      ```
+ |
+ |  Invoke:
+ |      ```python
+ |      messages = [
+ |          ("system", "You are a helpful translator. Translate the user sentence to French."),
+ |          ("human", "I love programming."),
+ |      ]
+ |      model.invoke(messages)
+ |      ```
