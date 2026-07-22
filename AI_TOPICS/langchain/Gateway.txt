@@ -116,3 +116,13 @@ from langchain_ollama import ChatOllama
  |      ]
  |      model.invoke(messages)
  |      ```
+
+
+chunk1: Text is naturally organized into hierarchical units such as paragraphs, 
+chunk2: as paragraphs sentences, and words. We can leverage this inherent structure to inform our 
+chunk3: to inform our splitting strategy, creating split that maintain natural language flow, maintain
+chunk4: language flow, maintainsemantic coherence within split, and adapts to varying levels of text granularity.
+chunk5: of text granularityLangChain’s RecursiveCharacterTextSplitter implements this concept:
+
+chunk1 : 1000 words. ( 20 words - overlap)
+chunk2 : 1000 words. (20 words)

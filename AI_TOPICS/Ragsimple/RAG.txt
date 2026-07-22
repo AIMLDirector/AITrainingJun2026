@@ -1,0 +1,35 @@
+RAG - retrievel, augumentation, generation 
+
+Knowlwdge base: ( repository of technical document)
+1 Document loader -- 
+     1. loading the data of different data format 
+     2. consolidating all the document into unified format
+
+2 Textsplitter
+   1. Split the document in equal size
+   2. overlapping of some document portion
+
+3. Embedding Model: 
+    1. converting the splitted document in to vector format
+
+4. Vector Store:
+    1. Store the data in the Vector DB or in memory 
+
+
+how to onboard into Data engineer product azure data factory  -
+
+Retrieval
+1  cosine similarity -- vector search -- context and meaningfull information search 
+
+
+answer:
+1.  
+2.
+3. 
+
+embedding model :
+ 1. convert the data from vector to text format
+
+ consolidating the output in format the customer is looking for 
+ 
+
