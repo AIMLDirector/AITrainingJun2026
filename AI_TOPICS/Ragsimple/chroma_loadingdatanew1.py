@@ -1,7 +1,6 @@
 import os
 from dotenv import load_dotenv
 from tqdm import tqdm
-
 from langchain_docling.loader import DoclingLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings

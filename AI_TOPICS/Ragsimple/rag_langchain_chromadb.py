@@ -9,9 +9,9 @@ CHROMA_DIR = "./chroma_db"
 
 
 def build_retriever():
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
     vectordb = Chroma(
-        collection_name="my_docs",
+        collection_name="books",
         persist_directory=CHROMA_DIR,
         embedding_function=embeddings,
     )
@@ -40,4 +40,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# retriever, tools( google search , platform website search) exit , model(1 year)  cost utilization will be reduced
+

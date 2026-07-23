@@ -1,13 +1,13 @@
 RAG - retrievel, augumentation, generation 
 
-Knowlwdge base: ( repository of technical document)
+Knowlwdge base: ( repository of technical document/process document) - sharepoint/s3/object storage/website/platform
 1 Document loader -- 
      1. loading the data of different data format 
      2. consolidating all the document into unified format
 
 2 Textsplitter
-   1. Split the document in equal size
-   2. overlapping of some document portion
+   1. Split the document in equal size( 1000)  chunk ( 1000 word)
+   2. overlapping of some document portion( 3 %  - 30 word)
 
 3. Embedding Model: 
     1. converting the splitted document in to vector format
@@ -16,12 +16,10 @@ Knowlwdge base: ( repository of technical document)
     1. Store the data in the Vector DB or in memory 
 
 
-how to onboard into Data engineer product azure data factory  -
-
 Retrieval
-1  cosine similarity -- vector search -- context and meaningfull information search 
+1  Question - > vector -> cosine similarity -- vector search -- context and meaningfull information search -> output
 
-
+k =3 
 answer:
 1.  
 2.
@@ -33,3 +31,22 @@ embedding model :
  consolidating the output in format the customer is looking for 
  
 
+pip install langchain
+pip install langchain-community
+pip install langchain-text-splitters
+pip install pypdf
+pip install python-docx
+pip install beautifulsoup4
+pip install markdown
+pip install sentence-transformers
+pip install unstructured
+pip install langchain-docling
+pip install langchain-chroma
+pip install langchain-openai
+pip install chromadb
+
+
+2021 -- langchain
+2022 -- langchain, langchain-core , langchain-community
+2024 -- langchain, langchin-core , langchain-community, langchain-tools, langchain-vendor
+2025 -- ......, langhchain-docling, pypdf,..... 
