@@ -1,0 +1,29 @@
+cd AI_TOPICS/RAGproduction
+cp .env.example .env   # set OPENAI_API_KEY
+# Keep chroma DB outside this folder (CHROMA_DIR=../rag_chroma_db) so --reload
+# does not interrupt ingest when Chroma writes files.
+uvicorn app.main:app --reload --reload-exclude 'chroma_db/*' --port 8000
+curl -X POST http://localhost:8000/v1/ingest
+curl -X POST http://localhost:8000/v1/query \
+  -H 'Content-Type: application/json' \
+  -d '{"question":"What is an LLM?"}'
+
+
+# Terminal 1 — API
+cd AI_TOPICS/RAGproduction
+uvicorn app.main:app --reload --reload-exclude 'chroma_db/*' --port 8000
+
+# Terminal 2 — UI
+cd AI_TOPICS/RAGproduction
+streamlit run streamlit_app.py
+
+
+# Deployment
+cd AI_TOPICS/RAGproduction
+cp .env.example .env   # set OPENAI_API_KEY
+docker compose up --build -d
+
+
+uvicorn app.main:app --reload --port 8000
+
+streamlit run streamlit_app.py

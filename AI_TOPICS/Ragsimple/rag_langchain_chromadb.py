@@ -5,6 +5,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_chroma import Chroma
 from langchain_classic.chains import RetrievalQA
 
+# RAG - Retrieve /augment /generate 
 CHROMA_DIR = "./chroma_db"
 
 
@@ -40,4 +41,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-
+#model invoke -> retrieve - > ( llm model(4 answer - > summarize text the matching information using system prompt), chromadb( vector number - 4 answer), embedding( question - vector number) )
