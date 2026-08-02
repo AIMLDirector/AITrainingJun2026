@@ -3,9 +3,9 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from openai import APIError, AuthenticationError, RateLimitError
 
-from app.api.deps import get_rag_service
-from app.schemas import QueryRequest, QueryResponse
-from app.services.rag import RAGService
+from AI_TOPICS.RAG.RAGproduction.app.api.deps import get_rag_service
+from AI_TOPICS.RAG.RAGproduction.app.schemas import QueryRequest, QueryResponse
+from AI_TOPICS.RAG.RAGproduction.app.services.rag import RAGService
 
 router = APIRouter(prefix="/v1", tags=["query"])
 

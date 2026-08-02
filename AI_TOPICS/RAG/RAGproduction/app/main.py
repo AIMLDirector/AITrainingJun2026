@@ -4,10 +4,11 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import health, ingest, query
-from app.config import get_settings
-from app.services import document_loader
-from app.services.rag import RAGService
+from AI_TOPICS.RAG.RAGproduction.app.api import health, query
+from AI_TOPICS.RAG.RAGproduction.app.api import ingest
+from AI_TOPICS.RAG.RAGproduction.app.config import get_settings
+from AI_TOPICS.RAG.RAGproduction.app.services import document_loader
+from AI_TOPICS.RAG.RAGproduction.app.services.rag import RAGService
 
 logging.basicConfig(
     level=logging.INFO,

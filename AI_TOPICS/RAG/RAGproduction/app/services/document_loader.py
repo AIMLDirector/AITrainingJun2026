@@ -6,7 +6,7 @@ from langchain_community.document_loaders import CSVLoader, PyPDFLoader, TextLoa
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from app.config import Settings
+from AI_TOPICS.RAG.RAGproduction.app.config import Settings
 
 logger = logging.getLogger(__name__)
 

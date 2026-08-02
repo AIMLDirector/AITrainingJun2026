@@ -1,0 +1,99 @@
+prompt engineering and context management  -- 
+
+1. role  
+2. context - history of information 
+3. intent -- suppose to do  - do and dont 
+4. example -- 
+5. integration - 
+
+master Agent --  coordinator  -- manager
+
+role: support engineer
+
+context1: history
+1 this team work on db side, this team is formed on 2020, 10 members 
+2 we worked on oracledb,, sqldb, mongodb
+3 we manage the support, implementation side of the work 
+4 work will come from developer, infrastructure team ..... 
+
+intent: 
+do and don't
+5 we dont do the engineer work 
+
+example:
+1
+2
+3
+
+integration:
+1
+2
+3
+
+SME:customer support team lead 
+Generic information (role, context, intent, example, integration(system prompt, descriptions))
+subagent1 - role, context, intent, example, integration(system prompt, descriptions) 
+subagent2 - role, context, intent, example, integration(system prompt, descriptions)
+subagent3 - role, context, intent, example, integration(system prompt, descriptions)
+ 
+ 1 text format 
+ 2 metadata format
+ 3 yaml format
+ 4 xml format 
+
+generic information + subagents1 
+
+
+Developer/AI/ devops/
+model(generic information ) -- knowledge article 
+
+Brain /capability/thinking 
+
+model(customer support information) -- data ( customer support engineer/ db )
+
+
+model - subagent1
+model - subagent2  - tools -- memory  -- output ( structured )
+tools
+
+middelware 
+
+memory( capture all the activitiy we have done )
+
+
+master agent(decision -- output is correct/wrong, retry, failed , final output )
+   subagent1 -- output 
+   subagent2 -- output 
+   subagent3 -- output 
+
+summarize the output --- customer 
+
+langchain/llamaindex/haystack/open adk/google adk/ claude adk 
+
+agent( model( prompt and context ) , output, tools, memory , middelware)
+
+1 . scoping session(technical )    - how are they working now, what is the challenges, how much of time it is taking to solve, how many members are working, what is the cost incured ?   record the session of how are they solving today step by step  
+
+2. management : reduce the cost, reduce the man power, automate, self-service 
+
+3. solutions 
+
+ 1. reduce the steps  -- 10 % 
+ 2. automating the work - 20 % 
+ 3. self-service document - 40 % 
+ 4. Ai agent  - 50 to 60 %  - last solution ( saving - 10 % ) - approved  -- success -- 3 months -  6 months 
+
+10 days -- -- 10 % -- 60 % 
+
+ step by step 
+
+ 1 connnect to the product  -- failed / if failed how many time i can retry , latency, timeout, when the product will be over loaded ? 
+ 2 validate the error  what it the command or search pattern you do 
+ 3 fetch the error. filter the logs ? 
+ 4 model identify the solution for the error
+ 5 output structure 
+
+1. cultured shift --  difficult , what is the benefit , what is in it for me ? , job security , 
+
+
+  

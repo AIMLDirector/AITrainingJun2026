@@ -2,8 +2,8 @@ from typing import Annotated
 
 from fastapi import Depends, Header, HTTPException, Request, status
 
-from app.config import Settings, get_settings
-from app.services.rag import RAGService
+from AI_TOPICS.RAG.RAGproduction.app.config import Settings, get_settings
+from AI_TOPICS.RAG.RAGproduction.app.services.rag import RAGService
 
 
 def get_rag_service(request: Request) -> RAGService:

@@ -1,0 +1,23 @@
+
+
+Testing 
+pip install -r requirements.txt
+python ingest.py  # loading the data 
+streamlit run streamlit_app.py
+
+
+
+Production release 
+docker compose up --build -d
+
+WeUI endpoint
+http://localhost:8501
+
+
+
+Addition command:
+
+curl -X POST http://localhost:8000/query -H "Content-Type: application/json" -d '{"question": "What is the main finding of the paper?"}'
+
+Start API
+uvicorn app:app --host 0.0.0.0 --port 8000 --workers 1

@@ -2,10 +2,10 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, Request
 
-from app.config import Settings, get_settings
-from app.schemas import HealthResponse
-from app.services.rag import RAGService
-from app.services import vectorstore as vs
+from AI_TOPICS.RAG.RAGproduction.app.config import Settings, get_settings
+from AI_TOPICS.RAG.RAGproduction.app.schemas import HealthResponse
+from AI_TOPICS.RAG.RAGproduction.app.services.rag import RAGService
+from AI_TOPICS.RAG.RAGproduction.app.services import vectorstore as vs
 
 router = APIRouter(tags=["health"])
 

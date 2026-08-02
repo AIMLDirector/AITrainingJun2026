@@ -4,9 +4,10 @@ from dataclasses import dataclass
 from langchain_classic.chains import RetrievalQA
 from langchain_openai import ChatOpenAI
 
-from app.config import Settings
-from app.schemas import QueryResponse, SourceDocument
-from app.services import document_loader, vectorstore as vs
+from AI_TOPICS.RAG.RAGproduction.app.config import Settings
+from AI_TOPICS.RAG.RAGproduction.app.schemas import QueryResponse, SourceDocument
+from AI_TOPICS.RAG.RAGproduction.app.services import document_loader
+from AI_TOPICS.RAG.RAGproduction.app.services import vectorstore as vs
 
 logger = logging.getLogger(__name__)
 

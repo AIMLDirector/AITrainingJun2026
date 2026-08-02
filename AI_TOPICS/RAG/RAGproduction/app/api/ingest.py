@@ -3,10 +3,10 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from openai import APIError, AuthenticationError, RateLimitError
 
-from app.api.deps import verify_api_key
-from app.config import Settings, get_settings
-from app.schemas import IngestResponse
-from app.services.rag import RAGService
+from AI_TOPICS.RAG.RAGproduction.app.api.deps import verify_api_key
+from AI_TOPICS.RAG.RAGproduction.app.config import Settings, get_settings
+from AI_TOPICS.RAG.RAGproduction.app.schemas import IngestResponse
+from AI_TOPICS.RAG.RAGproduction.app.services.rag import RAGService
 
 router = APIRouter(prefix="/v1", tags=["ingest"])
 
