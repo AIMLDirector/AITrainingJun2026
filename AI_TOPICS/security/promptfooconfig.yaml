@@ -1,0 +1,94 @@
+description: "Realtime Analytics AI Evaluation Suite"
+
+# Models to test
+providers:
+  - id: openai:gpt-4.1
+    config:
+      temperature: 0.2
+      max_tokens: 512
+
+  - id: openai:gpt-4o-mini
+    config:
+      temperature: 0.3
+      max_tokens: 512
+
+# Global settings
+defaultTest:
+  assert:
+    - type: latency
+      threshold: 2000   # ms (important for real-time systems)
+
+# Prompt templates
+prompts:
+  - id: realtime-insights
+    raw: |
+      You are a real-time analytics assistant.
+
+      Input data:
+      {{input}}
+
+      Task:
+      Generate actionable insights in under 3 bullet points.
+
+  - id: anomaly-detection
+    raw: |
+      You are an anomaly detection AI.
+
+      Dataset:
+      {{input}}
+
+      Identify:
+      - anomalies
+      - possible reasons
+      - severity (low/medium/high)
+
+  - id: interview-evaluator
+    raw: |
+      You are an AI interviewer.
+
+      Candidate Response:
+      {{input}}
+
+      Evaluate:
+      - technical accuracy
+      - communication clarity
+      - confidence score (0-100)
+
+# Test cases
+tests:
+  - description: "Basic analytics insight"
+    vars:
+      input: |
+        user_signups: [100, 120, 130, 5000, 140]
+
+    assert:
+      - type: contains
+        value: "anomaly"
+
+  - description: "Latency critical scenario"
+    vars:
+      input: |
+        transactions_per_sec: [200, 210, 205, 10000, 215]
+
+    assert:
+      - type: latency
+        threshold: 1500
+
+  - description: "Interview evaluation"
+    vars:
+      input: |
+        "I implemented a scalable microservices architecture using Kafka and handled 1M events/sec."
+
+    assert:
+      - type: regex
+        value: "confidence score.*[0-9]+"
+
+# Output configuration
+output:
+  format: table
+  verbose: true
+
+# CI/CD integration
+ci:
+  failOnError: true
+  maxLatency: 2000

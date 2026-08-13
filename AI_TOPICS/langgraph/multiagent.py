@@ -29,15 +29,23 @@ def coding_agent(state):
     )
     return {"response": result.content}
 
-
+def summarize_agent(state):
+    # Using both researcher and coding agent output as context for the summarizer
+    context = state["response"]
+    result = llm.invoke(
+        f"Summarize this answer:\n\n{context}"
+    )
+    return {"response": result.content}
 # Build the graph
 workflow = StateGraph(AgentState)
 workflow.add_node("research", research_agent)
 workflow.add_node("coding", coding_agent)
+workflow.add_node("summarize", summarize_agent)
 
 workflow.set_entry_point("research")
 workflow.add_edge("research", "coding")
-workflow.add_edge("coding", END)
+workflow.add_edge("coding", "summarize")
+workflow.add_edge("summarize", END)
 
 app = workflow.compile()
 

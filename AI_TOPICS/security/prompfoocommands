@@ -1,0 +1,201 @@
+  850  python
+  851  pip install langchain-openai
+  852  python
+  853  python
+  854  clear
+  855  pip install garak
+  856  garak --help
+  857  garak --list_probes
+  858  garak --model_type huggingface --model_name Qwen/Qwen3.6-27B --probes promptinject
+  859  garak --model_type huggingface --model_name deepseek-ai/DeepSeek-V4-Pro  --probes promptinject
+  860  pip install --upgrade transformers
+  861  garak --model_type huggingface --model_name deepseek-ai/DeepSeek-V4-Pro  --probes promptinject
+  862  garak --model_type huggingface --model_name Qwen/Qwen3.6-27B   --probes promptinject
+  863  garak --model_type huggingface --model_name meta-llama/Llama-3.2-1B-Instruct   --probes promptinject
+  864  lms --help
+  865  lms ls
+  866  lms login
+  867  df -h /
+  868  pwd
+  869  cd .cache
+  870  ls
+  871  ls -al
+  872  cd ../.lmstudio
+  873  clear
+  874  pwd
+  875  ls
+  876  ls -al
+  877  cd models
+  878  ls
+  879  ls -al
+  880  cd ..
+  881  cd hub
+  882  ls
+  883  ls -al
+  884  cd models
+  885  ls
+  886  ls -al
+  887  pwd
+  888  cd google
+  889  ls
+  890  ls -al
+  891  cd ..
+  892  pwd
+  893  cd ..
+  894  ls -al
+  895  cd ..
+  896  ls -al
+  897  more settings.json
+  898  cd bin
+  899  ls
+  900  ls -al
+  901  pwd
+  902  cd ..
+  903  ls -al
+  904  cd credentials
+  905  ls -al
+  906  more lmstudio-hub.json
+  907  free -m
+  908  top
+  909  psinfo
+  910  lms ls
+  911  lms ls
+  912  lms --help
+  913  lms ps
+  914  lsm unload qwen2.5-coder-3b-instruct 
+  915  lms unload qwen2.5-coder-3b-instruct 
+  916  lms ps
+  917  lms unload gemma-3-4b-it-qat
+  918  lms ps
+  919  hf --help
+  920  hf env
+  921  cd /Users/premkumargontrand/.cache/huggingface
+  922  ls -al
+  923  cd hub
+  924  ls
+  925  ls -al
+  926  pwd
+  927  python -V
+  928  pip list
+  929  which pip3
+  930  pip3 -V
+  931  locate pip
+  932  hf download meta-llama/Llama-3.2-1B-Instruct
+  933  hf list
+  934  hf --h
+  935  hf -h
+  936  hf models list
+  937  hf models ls
+  938  cd Users/premkumargontrand/.local/share/garak/garak_runs/
+  939  cd Users/premkumargontrand/.local/share/garak
+  940  cd /Users/premkumargontrand/.local/share/garak
+  941  ls -al
+  942  cd garak_runs
+  943  ls -al
+  944  ls -altr
+  945  pwd
+  946  cat garak.7f923d3a-421a-4e51-9353-f537ad4adc64.report.jsonl
+  947  clear
+  948  ollama --help
+  949  ollama list
+  950  ollama --help
+  951  ollama run gemma4:e4b
+  952  ollama list
+  953  ollama run qwen3-vl:8b
+  954  ollama run qwen3-vl:8b
+  955  ollama run qwen3-vl:8b
+  956  ollama rm gemma4:e4b 
+  957  ollama list
+  958  ollama --help
+  959  ollama list
+  960  ollama run gemma:2b 
+  961  ollama list
+  962  ollama run Inframodel:latest
+  963  pwd
+  964  cd ../../../..
+  965  pwd
+  966  cd .ollama
+  967  ls -al
+  968  cd models
+  969  ls -al
+  970  more Modelfile
+  971   ollama create Dataengineermodel -f Modelfile
+  972  ollama list
+  973  ollama run Dataengineermodel:latest 
+  974  ls -al
+  975  vi Modelfile
+  976   ollama create Dataengineermodel:v1 -f Modelfile
+  977  ollama list
+  978  ollama show gemma:2b  --modelfile
+  979  ollama show gemma:2b  --modelfile >> modelfile1
+  980  more modelfile1
+  981  ls -al
+  982  more Modelfile
+  983  ls -al
+  984  hf --help
+  985  hf models
+  986  hf models ls
+  987  hf models ls
+  988  ls -al
+  989  cd ..
+  990  pwd
+  991  cd ..
+  992  cd ../.ollama
+  993  ls -al
+  994  pwd
+  995  cd models
+  996  ls -al
+  997  ollama list
+  998  ollama list
+  999  ollama --help
+ 1000  ollama rm DataengineeringModelV:2 
+ 1001  promptfoo
+ 1002  npm list
+ 1003  pwd
+ 1004  cd ../
+ 1005  cd ..
+ 1006  cd security
+ 1007  ls -al
+ 1008  python -m venv securityvenv
+ 1009  source securityvenv/bin/activate
+ 1010  pip list
+ 1011  npm list
+ 1012  npm install promptfoo
+ 1013  python -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])'
+ 1014  promptfoo --help
+ 1015  npm list
+ 1016  promptfoo --help
+ 1017  pip install langfuse
+ 1018  cd ..
+ 1019  pwd
+ 1020  cd Observability
+ 1021  ls -al
+ 1022  python langfuseobservability.py
+ 1023  pip install python-dotenv
+ 1024  python langfuseobservability.py
+ 1025  pip install openai
+ 1026  python langfuseobservability.py
+ 1027  cd ..
+ 1028  npm install promptfoo --save
+ 1029  cd security
+ 1030  ls -al
+ 1031  ls -al
+ 1032  npm install promptfoo --save
+ 1033  promptfoo init --example eval-self-grading
+ 1034  npx promptfoo --help
+ 1035  npm install dotenv-cli
+ 1036  npx dotenv -e .env -- promptfoo eval
+ 1037  npx dotenv -e .env -- promptfoo eval
+ 1038  npx dotenv -e .env -- promptfoo eval
+ 1039  npx dotenv -e .env -- promptfoo eval -c promptfooconfig1.yaml
+ 1040  npx dotenv -e .env -- promptfoo eval -c promptfooconfig1.yaml
+ 1041  npx promptfoo view
+ 1042  npx dotenv -e .env -- promptfoo eval -c promptfooconfig2.yaml
+ 1043  npx promptfoo view
+ 1044  npx promptfoo@latest redteam setup
+ 1045  pip install modelaudit
+ 1046  npx promptfoo scan-model --list-scanners
+ 1047  npx promptfoo scan-model 
+ 1048  npx promptfoo scan-model /Users/premkumargontrand/.cache/huggingface/hub/models--Qwen--Qwen3.6-35B-A3B
+ 1049  history
+python -m garak --target_type huggingface --target_name /Users/premkumargontrand/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775 --probes lmrc.Profanity

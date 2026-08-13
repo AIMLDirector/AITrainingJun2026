@@ -1,0 +1,142 @@
+description: "AI Analytics + Interview Evaluation (Production Ready)"
+
+providers:
+  - id: openai:gpt-4.1
+    config:
+      temperature: 0.2
+      max_tokens: 500
+
+  - id: openai:gpt-4o-mini
+    config:
+      temperature: 0.3
+      max_tokens: 500
+
+# Global default tests
+defaultTest:
+  assert:
+    - type: latency
+      threshold: 2000
+
+# -------------------------
+# PROMPTS
+# -------------------------
+prompts:
+  - id: analytics-insights
+    raw: |
+      You are a real-time analytics AI.
+
+      Input data:
+      {{input}}
+
+      Respond ONLY in JSON:
+      {
+        "anomaly_detected": true/false,
+        "insight": "short explanation",
+        "confidence_score": number (0-100)
+      }
+
+  - id: anomaly-detection
+    raw: |
+      You are an anomaly detection system.
+
+      Dataset:
+      {{input}}
+
+      Respond ONLY in JSON:
+      {
+        "anomalies": ["..."],
+        "severity": "low|medium|high",
+        "confidence_score": number (0-100)
+      }
+
+  - id: interview-evaluator
+    raw: |
+      You are an AI interviewer.
+
+      Candidate Response:
+      {{input}}
+
+      Respond ONLY in JSON:
+      {
+        "technical_accuracy": number (0-100),
+        "communication": number (0-100),
+        "confidence_score": number (0-100),
+        "summary": "short feedback"
+      }
+
+# -------------------------
+# TEST CASES
+# -------------------------
+tests:
+  # -----------------------
+  # Analytics Test
+  # -----------------------
+  - description: "Detect spike anomaly"
+    vars:
+      input: |
+        user_signups: [100, 120, 130, 5000, 140]
+    assert:
+      - type: javascript
+        value: |
+          const data = JSON.parse(output);
+          return data.anomaly_detected === true;
+
+      - type: javascript
+        value: |
+          const data = JSON.parse(output);
+          return data.confidence_score >= 0 && data.confidence_score <= 100;
+
+  # -----------------------
+  # Anomaly Detection Test
+  # -----------------------
+  - description: "Transaction spike detection"
+    vars:
+      input: |
+        transactions_per_sec: [200, 210, 205, 10000, 215]
+    assert:
+      - type: javascript
+        value: |
+          const data = JSON.parse(output);
+          return ["low","medium","high"].includes(data.severity);
+
+      - type: javascript
+        value: |
+          const data = JSON.parse(output);
+          return Array.isArray(data.anomalies);
+
+  # -----------------------
+  # Interview Evaluation Test
+  # -----------------------
+  - description: "Evaluate strong backend candidate"
+    vars:
+      input: |
+        I built a scalable microservices system using Kafka and handled over 1 million events per second with fault tolerance.
+    assert:
+      - type: javascript
+        value: |
+          const data = JSON.parse(output);
+          return data.technical_accuracy >= 60;
+
+      - type: javascript
+        value: |
+          const data = JSON.parse(output);
+          return data.communication >= 50;
+
+      - type: javascript
+        value: |
+          const data = JSON.parse(output);
+          return data.confidence_score >= 50;
+
+# -------------------------
+# OUTPUT SETTINGS
+# -------------------------
+output:
+  format: table
+  verbose: true
+
+# -------------------------
+# CI SETTINGS
+# -------------------------
+ci:
+  failOnError: true
+  maxLatency: 2000

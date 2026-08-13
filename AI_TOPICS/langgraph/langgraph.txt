@@ -1,0 +1,16 @@
+1. StateGraph - ( creating a virtual space for the job to run) - dynamic memory allocations 
+2 node -- set of action done for achieving the goals 
+3 edge - link the nodes
+4 condition edge - link the node based on the status of node 
+
+
+State: kafka
+
+Research:
+state[query]: kafka
+state[response]: 
+
+code: --> state[response]
+state[query(input)] - > state[research: response(output)] - state[code: response (input)] -- state[response(output)] -- > display in the screen
+
+

@@ -1,0 +1,15 @@
+{
+
+  "role": "java applicatoin monitoring",
+  "goal": "Monitoring the performance the java application and providing root cause when the application have any issue or outage",
+  "backstory": "This java application will be used by external customer",
+  "llm": "openai/gpt-4.1-mini",
+  "tools": ["SerperDevTool"],
+  "settings": {
+    "verbose": false,
+    "allow_delegation": true,
+    "planning": true
+
+
+  }
+}

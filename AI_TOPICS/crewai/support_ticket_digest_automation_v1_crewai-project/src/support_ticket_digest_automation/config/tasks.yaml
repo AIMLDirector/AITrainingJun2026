@@ -1,0 +1,47 @@
+---
+fetch_recent_zendesk_tickets:
+  description: 'Use the Zendesk tools to retrieve the most recent support tickets
+    (up to {ticket_limit} tickets, default 50 if not specified). For each ticket,
+    collect: ticket ID, subject, full description, current status (open/pending/solved),
+    priority level set by the submitter, requester name/email, and creation timestamp.
+    Also search for any tickets marked as urgent or high-priority that may have been
+    submitted in the last {time_range} (default: 7 days).'
+  expected_output: 'A structured list of recent support tickets, each containing:
+    ticket ID, subject, description, status, priority, requester info, and timestamp.
+    Presented as a clean JSON-like or tabular format ready for analysis.'
+  agent: zendesk_ticket_fetcher
+categorize_and_analyze_tickets:
+  description: |
+    Using the fetched ticket data, perform the following analysis:
+    1. **Urgency Classification**: Assign each ticket an urgency level — Critical (system down / data loss / security), High (major feature broken, business impact), Medium (degraded experience, workaround exists), Low (minor issue, cosmetic, question).
+    2. **Topic Categorization**: Group tickets into topics such as: Billing & Payments, Technical/Bug, Account & Access, Onboarding, Feature Requests, Performance, or Other.
+    3. **Common Issues Detection**: Identify recurring patterns or issues that appear in 2 or more tickets. List the issue description and ticket IDs involved.
+    4. **Escalation Flagging**: Flag all Critical and High urgency tickets for escalation, noting the reason.
+  expected_output: |-
+    A structured analysis report containing:
+    - Per-ticket urgency and topic labels
+    - A grouped list of common/recurring issues with ticket IDs
+    - An escalation list of Critical and High priority tickets with justification
+  agent: support_ticket_analyst
+  context:
+  - fetch_recent_zendesk_tickets
+generate_support_digest_report:
+  description: "Using the ticket data and analysis, produce a complete Support Digest
+    Report in markdown format with the following sections:\n\n1. **Executive Summary**:
+    A 3–5 sentence overview of the current ticket landscape — total count, dominant
+    topics, overall urgency distribution.\n2. **Ticket Summaries**: For each ticket,
+    a 2–3 sentence concise summary capturing the issue and its impact.\n3. **\U0001F6A8
+    Escalation Alerts**: A clearly highlighted list of Critical and High urgency tickets,
+    with a brief reason why each needs immediate attention and the assigned owner
+    (if available).\n4. **\U0001F4CA Common Issues Breakdown**: A ranked list of recurring
+    issues with frequency count and the ticket IDs involved.\n5. **\U0001F4AC Suggested
+    Response Templates**: For the top 5 most frequent FAQ-style tickets, provide a
+    professional, empathetic suggested response the support agent can use or adapt.\n"
+  expected_output: 'A well-formatted markdown Support Digest Report containing all
+    5 sections: executive summary, ticket summaries, escalation alerts, common issues
+    breakdown, and suggested response templates. Ready to be shared directly with
+    the support team.'
+  agent: support_report_writer
+  context:
+  - fetch_recent_zendesk_tickets
+  - categorize_and_analyze_tickets

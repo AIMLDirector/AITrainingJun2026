@@ -1,0 +1,20 @@
+{
+
+  "name": "Appmonitoringagent",
+  "agents": ["java_applicatoin_monitoring"],
+  "tasks": [
+    {
+      "name": "analyze_the_application_log_task",
+      "description": "analyze the application log and identify any error or warning present in the log file and provide short term resolution and long term resolution",
+      "expected_output": "step by step method of implementing the solution",
+      "agent": "java_applicatoin_monitoring"
+
+    }
+
+  ],
+  "process": "sequential",
+  "verbose": true,
+  "memory": true,
+
+  "inputs": {}
+}
